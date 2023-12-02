@@ -27,3 +27,26 @@ This should start the **Airflow Server**. Then:
 - Navigate to http://0.0.0.0:8080/
 - Login with user/pass: `airflow` / `airflow`
 - The UVa DAGs are tagged with `uva`. You can filter them: http://0.0.0.0:8080/home?tags=uva
+
+## How to install projects dependencies
+
+Needed to execute the DAGs that uses the Python code in `common_modules`.
+
+```bash
+pipenv --python 3.10
+pipenv install
+```
+
+## hello_world DAG
+
+## my_project DAG
+
+We can execute `my_project` module without the DAG first.
+
+```bash
+pipenv run python dags/common_modules/my_project/my_project.py
+```
+
+It should output `Dataset stored at: /tmp/uva/dataset.csv`
+
+To execute via DAGs, we head to [my_project DAG](http://0.0.0.0:8080/dags/my_project_dag/grid) and execute it. The output should appear in `outputs/my_project_dag/dataset.csv`
