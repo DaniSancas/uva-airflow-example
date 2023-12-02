@@ -5,4 +5,5 @@ logs/*
 outputs/*
 !outputs/.gitkeep
 
+.ipynb_checkpoints
 .env*

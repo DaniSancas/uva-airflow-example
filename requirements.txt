@@ -1,0 +1,3 @@
+# Requirements for Dockerfile
+ipykernel
+apache-airflow-providers-papermill
